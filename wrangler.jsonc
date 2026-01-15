@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sink-worker",
+  "main": "dist/server/index.mjs",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "dist/public"
+  },
+  "compatibility_date": "2025-05-08",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "keep_vars": true,
+  "upload_source_maps": true,
+  "ai": {
+    "binding": "AI"
+  },
+  "analytics_engine_datasets": [
+    {
+      "binding": "ANALYTICS",
+      "dataset": "sink"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "f3557a52a7104bff9778f0cd1fdbf619" // IMPORTANT: Change this to your KV namespace ID
+    }
+  ]
+}
